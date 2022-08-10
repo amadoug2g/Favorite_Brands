@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/makeListFragment">
+
+    <fragment
+        android:id="@+id/makeListFragment"
+        android:name="com.playgroundagc.favoritebrands.presentation.fragment.make.MakeListFragment"
+        tools:layout="@layout/fragment_make_list"
+        android:label="@string/make_list_fragment_title" />
+</navigation>
