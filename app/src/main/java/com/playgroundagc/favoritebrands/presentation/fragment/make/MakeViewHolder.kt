@@ -3,7 +3,7 @@ package com.playgroundagc.favoritebrands.presentation.fragment.make
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.playgroundagc.core.domain.Make
+import com.playgroundagc.core.domain.model.Make
 import com.playgroundagc.favoritebrands.R
 import com.playgroundagc.favoritebrands.databinding.MakeItemBinding
 

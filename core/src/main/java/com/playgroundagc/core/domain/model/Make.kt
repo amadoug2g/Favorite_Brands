@@ -1,4 +1,4 @@
-package com.playgroundagc.core.domain
+package com.playgroundagc.core.domain.model
 
 /**
  * Created by Amadou on 10/08/2022

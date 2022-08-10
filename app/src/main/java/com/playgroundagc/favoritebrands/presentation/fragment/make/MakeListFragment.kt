@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.playgroundagc.core.domain.Make
+import com.playgroundagc.core.domain.model.Make
 import com.playgroundagc.favoritebrands.R
 import com.playgroundagc.favoritebrands.databinding.FragmentMakeListBinding
 

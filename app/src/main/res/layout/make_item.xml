@@ -6,7 +6,7 @@
 
         <variable
             name="make"
-            type="com.playgroundagc.core.domain.Make" />
+            type="com.playgroundagc.core.domain.model.Make" />
     </data>
 
     <androidx.cardview.widget.CardView

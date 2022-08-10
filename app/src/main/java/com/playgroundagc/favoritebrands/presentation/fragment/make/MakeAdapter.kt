@@ -3,7 +3,7 @@ package com.playgroundagc.favoritebrands.presentation.fragment.make
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.playgroundagc.core.domain.Make
+import com.playgroundagc.core.domain.model.Make
 
 /**
  * Created by Amadou on 10/08/2022

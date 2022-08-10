@@ -8,6 +8,15 @@
     <fragment
         android:id="@+id/makeListFragment"
         android:name="com.playgroundagc.favoritebrands.presentation.fragment.make.MakeListFragment"
-        tools:layout="@layout/fragment_make_list"
-        android:label="@string/make_list_fragment_title" />
+        android:label="@string/make_list_fragment_title"
+        tools:layout="@layout/fragment_make_list" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.playgroundagc.favoritebrands.presentation.fragment.favorite.FavoriteFragment"
+        android:label="@string/favorite_fragment_title"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/favoriteToMakeList"
+            app:destination="@id/makeListFragment" />
+    </fragment>
 </navigation>

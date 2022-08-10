@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Favorite Brands</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="make_list_fragment_title">Car Brands</string>
     <string name="make_list_text_btn">Brand list</string>
     <string name="brand_action_button_desc">Brand action button</string>
+    <string name="favorite_fragment_title">Favorites</string>
 </resources>
