@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="make"
+            type="com.playgroundagc.core.domain.Make" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/make_item_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:shadowRadius="16"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:id="@+id/make_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/make_item_textView"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@{make.name}"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/make_item_action"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/brand_action_button_desc"
+                android:src="@drawable/ic_round_favorite_border" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
