@@ -12,7 +12,8 @@ import com.playgroundagc.core.domain.usecases.ToggleFavoriteUC
  *
  */
 
-class FragmentViewModel(private val toggleFavoriteUC: ToggleFavoriteUC) : ViewModel() {
+class FragmentViewModel(private val toggleFavoriteUC: ToggleFavoriteUC) :
+    ViewModel() {
 
     //region Variables
     private var _makeList = MutableLiveData<MutableList<Make>>()

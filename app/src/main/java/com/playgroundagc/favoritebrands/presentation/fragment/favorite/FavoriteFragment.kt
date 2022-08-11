@@ -28,14 +28,14 @@ class FavoriteFragment : Fragment() {
 
         setupViews()
 
-        binding.viewModel = viewModel
-
         return binding.root
     }
     //endregion
 
     //region Setup
     private fun setupViews() {
+        binding.viewModel = viewModel
+
         binding.apply {
             makeListBtn.setOnClickListener {
                 navigateToMakeList()
@@ -46,7 +46,9 @@ class FavoriteFragment : Fragment() {
 
     //region Navigation
     private fun navigateToMakeList() {
-        Navigation.findNavController(binding.makeCountTextView).navigate(R.id.favoriteToMakeList)
+        Navigation
+            .findNavController(binding.makeCountTextView)
+            .navigate(R.id.favoriteToMakeList)
     }
     //endregion
 }
