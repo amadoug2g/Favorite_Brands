@@ -5,4 +5,5 @@
     <string name="make_list_text_btn">Brand list</string>
     <string name="brand_action_button_desc">Brand action button</string>
     <string name="favorite_fragment_title">Favorites</string>
+    <string name="make_count_text">Number of favorite brands</string>
 </resources>

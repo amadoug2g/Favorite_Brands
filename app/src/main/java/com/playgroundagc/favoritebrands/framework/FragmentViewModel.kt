@@ -1,21 +1,22 @@
 package com.playgroundagc.favoritebrands.framework
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.playgroundagc.core.domain.model.Make
+import com.playgroundagc.core.domain.usecases.ToggleFavoriteUC
 
 /**
  * Created by Amadou on 11/08/2022
  *
  */
 
-class FragmentViewModel(application: Application) : AndroidViewModel(application) {
+class FragmentViewModel(private val toggleFavoriteUC: ToggleFavoriteUC) : ViewModel() {
+
     //region Variables
     private var _makeList = MutableLiveData<MutableList<Make>>()
     val makeList: LiveData<MutableList<Make>> = _makeList
-
 
     init {
         initializeList()
@@ -51,8 +52,27 @@ class FragmentViewModel(application: Application) : AndroidViewModel(application
         _makeList.value = brandList
     }
 
-    fun toggleFavorite() {
+    fun getFavoriteCount(): String {
+        val result = _makeList.value?.let { list ->
+            list.filter { make ->
+                make.isFavorite
+            }
+        }?.count() ?: 0
 
+        return result.toString()
+    }
+
+    fun toggleFavorite(make: Make) {
+        toggleFavoriteUC.invoke(make)
     }
     //endregion
+}
+
+class FragmentViewModelFactory(private val toggleFavoriteUC: ToggleFavoriteUC) :
+    ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return modelClass.getConstructor(
+            ToggleFavoriteUC::class.java
+        ).newInstance(toggleFavoriteUC)
+    }
 }

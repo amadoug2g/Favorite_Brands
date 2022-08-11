@@ -1,7 +1,6 @@
 package com.playgroundagc.favoritebrands.presentation.fragment.make
 
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.playgroundagc.core.domain.model.Make
 
@@ -10,22 +9,12 @@ import com.playgroundagc.core.domain.model.Make
  *
  */
 
-class MakeAdapter(private var action: MakeAction): ListAdapter<Make, MakeViewHolder>(ListDiffUtil()) {
+class MakeListAdapter(private var action: MakeAction): ListAdapter<Make, MakeViewHolder>(MakeListDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MakeViewHolder {
         return MakeViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: MakeViewHolder, position: Int) {
         holder.bind(getItem(position), action)
-    }
-}
-
-class ListDiffUtil: DiffUtil.ItemCallback<Make>() {
-    override fun areItemsTheSame(oldItem: Make, newItem: Make): Boolean {
-        return oldItem == newItem
-    }
-
-    override fun areContentsTheSame(oldItem: Make, newItem: Make): Boolean {
-        return oldItem == newItem
     }
 }

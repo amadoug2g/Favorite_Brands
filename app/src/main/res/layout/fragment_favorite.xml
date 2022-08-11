@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.playgroundagc.favoritebrands.framework.FragmentViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -18,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Number of favorite brands"
+            android:text="@string/make_count_text"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -26,7 +28,7 @@
             android:id="@+id/make_count_nbr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10"
+            android:text="@{viewModel.favoriteCount}"
             android:textAlignment="center"
             android:textSize="80sp" />
 
