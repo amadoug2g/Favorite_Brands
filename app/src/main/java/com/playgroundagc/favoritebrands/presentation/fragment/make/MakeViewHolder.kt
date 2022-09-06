@@ -7,12 +7,20 @@ import com.playgroundagc.core.domain.model.Make
 import com.playgroundagc.favoritebrands.R
 import com.playgroundagc.favoritebrands.databinding.MakeItemBinding
 
-class MakeViewHolder(private val binding: MakeItemBinding): RecyclerView.ViewHolder(binding.root) {
+class MakeViewHolder(private val binding: MakeItemBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(make: Make, action: MakeAction) {
         with(binding) {
             this.make = make
             makeItemAction.setImageResource(make.favoriteStatus())
-            makeItemAction.setOnClickListener { action.onClick(make) }
+
+            makeItemAction.setOnClickListener {
+                if (make.isFavorite) {
+                    makeItemAction.setImageResource(R.drawable.ic_round_favorite_border)
+                } else {
+                    makeItemAction.setImageResource(R.drawable.ic_round_favorite)
+                }
+                action.onClick(make)
+            }
         }
     }
 

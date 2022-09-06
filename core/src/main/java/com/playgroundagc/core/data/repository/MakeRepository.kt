@@ -8,5 +8,5 @@ import com.playgroundagc.core.domain.model.Make
  */
 
 class MakeRepository(private val dataSource: MakeDataSource) {
-    fun toggleFavorite(make: Make) = dataSource.favorite(make)
+    fun toggleFavorite(make: Make): Make { return dataSource.favorite(make) }
 }

@@ -9,7 +9,8 @@ import com.playgroundagc.core.domain.model.Make
  */
 
 class MakeDataSourceImpl: MakeDataSource {
-    override fun favorite(make: Make) {
+    override fun favorite(make: Make): Make {
         make.isFavorite = !make.isFavorite
+        return make
     }
 }

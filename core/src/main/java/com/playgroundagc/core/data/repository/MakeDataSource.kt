@@ -8,5 +8,5 @@ import com.playgroundagc.core.domain.model.Make
  */
 
 interface MakeDataSource {
-    fun favorite(make: Make)
+    fun favorite(make: Make): Make
 }

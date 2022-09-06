@@ -39,6 +39,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:src="@drawable/ic_round_favorite_border"
                 android:layout_marginEnd="16dp"
                 android:background="@null"
                 android:contentDescription="@string/brand_action_button_desc" />
